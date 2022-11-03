@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 3% 15% 15px;
+  transition: all 0.5s;
+}
+
+#navbar.sticky {
+  padding-top: 1%;
+}
+
+#navbar .logo {
+  font-size: 2.4rem;
+  text-decoration: none;
+  color: white;
+}
+
+#navbar .logo span {
+  color: rgb(255, 255, 0);
+}
+
+#navlist li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+#navlist a {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  padding: 0 5px;
+  position: relative;
+}
+
+#navlist a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scale(0);
+  background-color: rgb(255, 255, 0);
+  transition: all 0.5s;
+}
+
+#navlist a:hover::after {
+  transform: scale(1);
+}
+
+.btn {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(255, 255, 0);
+  border: 2px solid rgb(255, 255, 0);
+  border-radius: 40px;
+  padding: 10px 30px;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: white;
+  transform: scale(1.2);
+}
+
+#home {
+  min-height: 100vh;
+}
+
+#about {
+  min-height: 100vh;
+  background-color: gray;
+}
